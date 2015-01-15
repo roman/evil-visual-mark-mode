@@ -10,7 +10,7 @@ follow each marker.
 
 ## Screenshots
 
-
+![screenshot](https://raw.githubusercontent.com/roman/evil-visual-mark-mode/master/evil-visual-mark-mode.gif)
 
 ## Development
 
