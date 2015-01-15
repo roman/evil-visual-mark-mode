@@ -5,7 +5,7 @@
 
 ;; Author: Roman Gonzalez <romanandreg@gmail.com>
 ;; Maintainer: Roman Gonzalez <romanandreg@gmail.com>
-;; Version: 0.0.2
+;; Version: 0.0.1
 ;; Package-Requires: ((dash "2.10"))
 ;; Keywords: evil
 
