@@ -28,8 +28,7 @@
 
 ;;; Code:
 (defvar evil-visual-mark-overlay-alist '()
-  "List of evil visual mark overlays."
-  :group 'evil-visual-mark)
+  "List of evil visual mark overlays.")
 
 (defface evil-visual-marker-face
   '((t (:foreground "white"
