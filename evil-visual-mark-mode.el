@@ -42,7 +42,7 @@
 
 This marker will normally come from the advised evil-set-marker
 function."
-  (let* ((marker-pos (marker-position marker-pos)))
+  (let* ((marker-pos (marker-position marker)))
     (make-overlay marker-pos (+ 2 marker-pos))))
 
 (defun evil-visual-mark-overlay-put (char overlay)
@@ -163,6 +163,6 @@ This updates the overlays that show the evil marks on buffer."
       (evil-visual-mark-cleanup))))
 
 
-(provide evil-visual-mark-mode)
+(provide 'evil-visual-mark-mode)
 
 ;;; evil-visual-mark-mode ends here
