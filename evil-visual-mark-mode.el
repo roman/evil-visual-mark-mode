@@ -6,7 +6,7 @@
 ;; Author: Roman Gonzalez <romanandreg@gmail.com>
 ;; Maintainer: Roman Gonzalez <romanandreg@gmail.com>
 ;; Version: 0.0.1
-;; Package-Requires: ((dash "2.10"))
+;; Package-Requires: ((evil "1.0.9") (dash "2.10"))
 ;; Keywords: evil
 
 ;; This file is not part of GNU Emacs.
