@@ -30,7 +30,7 @@
 (defvar evil-visual-mark-overlay-alist '()
   "List of evil visual mark overlays.")
 
-(defface evil-visual-marker-face
+(defface evil-visual-mark-face
   '((t (:foreground "white"
                     :background "color-89"
                     :underline t)))
@@ -51,7 +51,7 @@ function."
                'before-string
                (propertize (format "`%c" char)
                            'face
-                           'evil-visual-marker-face))
+                           'evil-visual-mark-face))
   overlay)
 
 
