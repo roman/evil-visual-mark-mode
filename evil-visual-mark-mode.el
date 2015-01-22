@@ -147,6 +147,7 @@ This updates the overlays that show the evil marks on buffer."
         (marker  ad-do-it))
     (evil-visual-mark-update-mark char marker)))
 
+;;;###autoload
 (define-minor-mode evil-visual-mark-mode
   "Makes evil marks visible and easy to remember."
   :global t
