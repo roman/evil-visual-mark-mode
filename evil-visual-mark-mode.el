@@ -124,7 +124,7 @@ This function is called when disabling `evil-visual-mark-mode'"
 (defun evil-visual-mark-update-mark (char marker)
   "Update overlay value for CHAR.
 
-This function gets called from advising `evil-set-mark', the MARKER is
+This function gets called from advising `evil-set-marker', the MARKER is
 the result of calling that function."
   (when (and marker
              (markerp marker))
