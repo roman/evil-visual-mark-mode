@@ -52,8 +52,7 @@
 
 This marker will normally come from the advised evil-set-marker
 function."
-  (let* ((marker-pos (marker-position marker)))
-    (make-overlay marker-pos (+ 2 marker-pos))))
+  (make-overlay marker marker))
 
 (defun evil-visual-mark-overlay-put (char overlay)
   "Puts marker CHAR in created OVERLAY."
