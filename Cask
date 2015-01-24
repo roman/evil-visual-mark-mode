@@ -1,7 +1,7 @@
 (source gnu)
 (source melpa)
 
-(package "evil-visual-mark-mode" "0.0.1"
+(package "evil-visual-mark-mode" "0.0.2"
          "Helps to remember to clock-in on org files when coding")
 
 (package-file "evil-visual-mark-mode.el")
