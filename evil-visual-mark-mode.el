@@ -52,8 +52,7 @@
 
 This marker will normally come from the advised evil-set-marker
 function."
-  (let* ((marker-pos (marker-position marker)))
-    (make-overlay marker-pos (+ 2 marker-pos))))
+  (make-overlay marker marker))
 
 (defun evil-visual-mark-overlay-put (char overlay)
   "Puts marker CHAR in created OVERLAY."
@@ -109,9 +108,10 @@ This function is called on `evil-normal-state-entry-hook'."
 This function is called on the initialization of
 `evil-visual-mark-mode'"
   (evil-visual-mark-populate-overlay-alist)
-  (--each evil-visual-mark-overlay-alist
-    (evil-visual-mark-overlay-put (car it)
-                                  (cdr it))))
+  (when (evil-normal-state-p)
+    (--each evil-visual-mark-overlay-alist
+      (evil-visual-mark-overlay-put (car it)
+                                    (cdr it)))))
 
 (defun evil-visual-mark-cleanup ()
   "Remove all overlays that were created by this mode.
