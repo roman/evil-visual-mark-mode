@@ -36,7 +36,18 @@
 (require 'evil)
 (require 'dash)
 
-;;; Code:
+
+(defgroup evil-visual-mark-mode nil
+  "Display evil marks on buffer."
+  :prefix "evil-visual-mark-mode"
+  :group 'evil)
+
+(defcustom evil-visual-mark-exclude-marks '()
+  "Marks which should not be displayed on buffer."
+  :type '(repeat character)
+  :group 'evil-visual-mark-mode)
+
+
 (defvar evil-visual-mark-overlay-alist '()
   "List of evil visual mark overlays.")
 
@@ -56,11 +67,12 @@ function."
 
 (defun evil-visual-mark-overlay-put (char overlay)
   "Puts marker CHAR in created OVERLAY."
-  (overlay-put overlay
-               'before-string
-               (propertize (format "`%c" char)
-                           'face
-                           'evil-visual-mark-face))
+  (unless (member char evil-visual-mark-exclude-marks)
+    (overlay-put overlay
+                 'before-string
+                 (propertize (format "`%c" char)
+                             'face
+                             'evil-visual-mark-face)))
   overlay)
 
 
