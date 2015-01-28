@@ -53,8 +53,8 @@
 
 (defface evil-visual-mark-face
   '((t (:foreground "white"
-                    :background "color-89"
-                    :underline t)))
+        :background "#8b008b"
+        :underline t)))
   "Face for evil visual marks"
   :group 'evil-visual-mark)
 
