@@ -7,10 +7,15 @@ is because you figured you are going to come back later, also you
 would like to track all your important functions without having to
 follow each marker.
 
-
 ## Screenshots
 
 ![screenshot](https://raw.githubusercontent.com/roman/evil-visual-mark-mode/master/evil-visual-mark-mode.gif)
+
+## Remove special characters from visual mark
+
+If for some reason, you would like to not display particular mark
+letters, you may add them to the `evil-visual-mark-exclude-marks`,
+by default this list will have the `^`, `[`, `]` special marks.
 
 ## Development
 

@@ -42,9 +42,9 @@
   :prefix "evil-visual-mark-mode"
   :group 'evil)
 
-(defcustom evil-visual-mark-exclude-marks '()
+(defcustom evil-visual-mark-exclude-marks '("^" "[" "]")
   "Marks which should not be displayed on buffer."
-  :type '(repeat character)
+  :type '(repeat string)
   :group 'evil-visual-mark-mode)
 
 
@@ -67,14 +67,13 @@ function."
 
 (defun evil-visual-mark-overlay-put (char overlay)
   "Puts marker CHAR in created OVERLAY."
-  (unless (member char evil-visual-mark-exclude-marks)
+  (unless (member (format "%c" char) evil-visual-mark-exclude-marks)
     (overlay-put overlay
                  'before-string
                  (propertize (format "`%c" char)
                              'face
                              'evil-visual-mark-face)))
   overlay)
-
 
 (defun evil-visual-mark-populate-overlay-alist ()
   "Populate the `evil-visual-mark-overlay-alist'.
