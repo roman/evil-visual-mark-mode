@@ -42,7 +42,7 @@
   :prefix "evil-visual-mark-mode"
   :group 'evil)
 
-(defcustom evil-visual-mark-exclude-marks '()
+(defcustom evil-visual-mark-exclude-marks '("^" "[" "]")
   "Marks which should not be displayed on buffer."
   :type '(repeat character)
   :group 'evil-visual-mark-mode)
