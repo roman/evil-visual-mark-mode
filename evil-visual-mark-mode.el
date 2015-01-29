@@ -44,7 +44,7 @@
 
 (defcustom evil-visual-mark-exclude-marks '("^" "[" "]")
   "Marks which should not be displayed on buffer."
-  :type '(repeat character)
+  :type '(repeat string)
   :group 'evil-visual-mark-mode)
 
 
